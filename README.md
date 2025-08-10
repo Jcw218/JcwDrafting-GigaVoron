@@ -9,6 +9,7 @@ These include:
 - Additional code and details for Obico Monitoring
 - "Readme" for upgrade install
 - Oem 10.2" TJC Touch Screen Firmware package for integration with new upgrades
+- Adapter plate for nema 23 x axis upgrade
 
 Feel like buying me a coffee?
 
