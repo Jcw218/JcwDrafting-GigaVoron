@@ -1,0 +1,5 @@
+[variables]
+filepath = '~/printer_data/config/saved_variables.cfg'
+last_file = 'saved_variables'
+power_resume_z = 0.0
+was_interrupted = False

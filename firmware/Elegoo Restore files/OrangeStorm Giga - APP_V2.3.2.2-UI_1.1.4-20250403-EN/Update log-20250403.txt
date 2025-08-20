@@ -1,0 +1,3 @@
+2025/4/3
+Screen Firmware: UI_V1.1.4
+1. Korean language has been added.
