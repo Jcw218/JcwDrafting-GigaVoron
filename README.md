@@ -9,7 +9,7 @@ Please be make sure you know the limits of your machine, the included data packa
 - EB SB2209 CAN (RP2040 and STM32G0B1)
 - BTT Eddy Duo (CANBUS Capable)
 - BTT Pi V1.2
-- Knomi 2 (important due to bed leveling integration. bed level will not work without it. modify the firmware to suit if not included)
+- Knomi 2 (important due to bed leveling integration. Bed level will not work without it. Modify the firmware to suit if it's not included)
 
 To Install Klipper using the octopus pro as a CANBUS bridge follow Esoterical CANBUS guide here: https://canbus.esoterical.online/mainboard_flashing
 
