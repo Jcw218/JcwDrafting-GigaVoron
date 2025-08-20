@@ -13,7 +13,7 @@ Please be make sure you know the limits of your machine, the included data packa
 
 To Install Klipper using the octopus pro as a CANBUS bridge follow Esoterical CANBUS guide here: https://canbus.esoterical.online/mainboard_flashing
 
-These include: 
+Included in this data pacakge: 
 - Apapter plate Step files for Stealth Burner and other hotend attachements
 - Klipper install package to suit octopus pro, Raspberry pi, Eddy, BTT SB2209, SB2240, 
 - Firmware for Octopus Pro and Raspbarry Pi motherboard upgrade
