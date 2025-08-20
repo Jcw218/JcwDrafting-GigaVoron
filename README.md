@@ -3,7 +3,7 @@ Modifications to the Orangestorm Giga to improve its usability, Modifications an
                                             WARNING!!! 
 With the exception of the Print head; these modifications will not work with the original manufacturers motherboard or firmware.
 
-Please be aware of the specifications of your machine, the included data is for a configuration of the following parts:
+Please be make sure you know the limits of your machine, the included data package is for the following parts:
 - Octopus Pro V1.1 & V1.0 (F446 and H723)
 - Raspberry Pi 4
 - EB SB2209 CAN (RP2040 and STM32G0B1)
