@@ -1,0 +1,233 @@
+{
+    "adaptive_bed_mesh_margin": "0",
+    "auxiliary_fan": "0",
+    "bbl_use_printhost": "0",
+    "bed_custom_model": "",
+    "bed_custom_texture": "",
+    "bed_exclude_area": [
+        "0x0"
+    ],
+    "bed_mesh_max": "99999,99999",
+    "bed_mesh_min": "-99999,-99999",
+    "bed_mesh_probe_distance": "50,50",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0\n",
+    "best_object_pos": "0.5,0.5",
+    "change_extrusion_role_gcode": "",
+    "change_filament_gcode": "M600",
+    "cooling_tube_length": "5",
+    "cooling_tube_retraction": "91.5",
+    "default_filament_profile": [
+        "Elegoo PLA @Elegoo Giga"
+    ],
+    "default_print_profile": "0.50mm Standard @Elegoo Giga 1.0 nozzle",
+    "deretraction_speed": [
+        "35"
+    ],
+    "disable_m73": "0",
+    "emit_machine_limits_to_gcode": "1",
+    "enable_filament_ramming": "1",
+    "enable_long_retraction_when_cut": "0",
+    "extra_loading_move": "-2",
+    "extruder_clearance_height_to_lid": "120",
+    "extruder_clearance_height_to_rod": "65",
+    "extruder_clearance_radius": "65",
+    "extruder_colour": [
+        "#018001"
+    ],
+    "extruder_offset": [
+        "0x0"
+    ],
+    "fan_kickstart": "0",
+    "fan_speedup_overhangs": "1",
+    "fan_speedup_time": "0.5",
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "head_wrap_detect_zone": [],
+    "high_current_on_filament_swap": "0",
+    "host_type": "octoprint",
+    "inherits": "Elegoo OrangeStorm Giga 1.0 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";LAYER:{layer_num+1}\n{if layer_num > 0 and layer_num < 3}\n;Giga zoned hot bed control\n;Case 1\nM140 S0\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM140 T0 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM140 T1 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((first_layer_print_max[1])) > 402.5}\nM140 T3 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405 && ((first_layer_print_max[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 2\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM140 T3 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 3\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM140 T1 S[bed_temperature_initial_layer_single]\n{if ((first_layer_print_max[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 4\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n\n{endif}",
+    "long_retractions_when_cut": [
+        "0"
+    ],
+    "machine_end_gcode": "{if max_layer_z < printable_height}G1 Z{z_offset+min(max_layer_z+2, printable_height)} F600 ; Move print head up{endif}\nG1 X5 Y{print_bed_max[1]*0.8} F{travel_speed*60} ; present print\n{if max_layer_z < printable_height-10}G1 Z{z_offset+min(max_layer_z+70, printable_height-10)} F600 ; Move print head further up{endif}\n{if max_layer_z < printable_height*0.4}G1 Z{printable_height*0.4} F600 ; Move print head further up{endif}\nM140 S0 ; turn off heatbed\nM104 S0 ; turn off temperature\nM107 ; turn off fan\nM84 ; disable motors",
+    "machine_load_filament_time": "25",
+    "machine_max_acceleration_e": [
+        "10000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "10000",
+        "5000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "10000",
+        "5000"
+    ],
+    "machine_max_acceleration_travel": [
+        "5000",
+        "5000"
+    ],
+    "machine_max_acceleration_x": [
+        "6000",
+        "5000"
+    ],
+    "machine_max_acceleration_y": [
+        "6000",
+        "5000"
+    ],
+    "machine_max_acceleration_z": [
+        "300",
+        "300"
+    ],
+    "machine_max_jerk_e": [
+        "10",
+        "3"
+    ],
+    "machine_max_jerk_x": [
+        "9",
+        "9"
+    ],
+    "machine_max_jerk_y": [
+        "9",
+        "9"
+    ],
+    "machine_max_jerk_z": [
+        "2",
+        "2"
+    ],
+    "machine_max_speed_e": [
+        "70",
+        "60"
+    ],
+    "machine_max_speed_x": [
+        "500",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "500",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "30",
+        "30"
+    ],
+    "machine_min_extruding_rate": [
+        "0",
+        "0"
+    ],
+    "machine_min_travel_rate": [
+        "0",
+        "0"
+    ],
+    "machine_pause_gcode": "PAUSE",
+    "machine_start_gcode": ";Jcw GIGA - 0.6nozzle\n;CFG-Orcaslicer-000000\nM400 ; wait for buffer to clear\n;[printer_model]\n;initial_filament:{filament_type[initial_extruder]}\n;curr_bed_type={curr_bed_type}\nM220 S100 ;Set the feed speed to 100%\nM221 S100 ;Set the flow rate to 100%\nM104 S140\n\n;Giga zoned hot bed control\n;Case 1\nM140 S0\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM140 T0 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM140 T1 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((first_layer_print_max[1])) > 402.5}\nM140 T3 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405 && ((first_layer_print_max[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 2\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM140 T3 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 3\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM140 T1 S[bed_temperature_initial_layer_single]\n{if ((first_layer_print_max[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 4\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM140 T2 S[bed_temperature_initial_layer_single]\n{endif}\nG90\nG28 ;home\nG1 Z10 F300\nG1 X67.5 Y50 F6000\n;\n;Giga zoned hot bed control\n;Case 1\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM190 T0 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM190 T1 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((first_layer_print_max[1])) > 402.5}\nM190 T3 S[bed_temperature_initial_layer_single]\n{endif}\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405 && ((first_layer_print_max[1])) > 402.5}\nM190 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 2\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) < 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM190 T3 S[bed_temperature_initial_layer_single]\n{if ((min(print_bed_max[0], max(first_layer_print_min[0] + 32, first_layer_print_max[0])))) > 405}\nM190 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 3\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) < 402.5}\nM190 T1 S[bed_temperature_initial_layer_single]\n{if ((first_layer_print_max[1])) > 402.5}\nM190 T2 S[bed_temperature_initial_layer_single]\n{endif}\n{endif}\n\n;Case 4\n{if (min(print_bed_max[0], first_layer_print_min[0] + 32) - 32) > 405 && (max(0, first_layer_print_min[1])) > 402.5}\nM190 T2 S[bed_temperature_initial_layer_single]\n{endif}\nG1 Z10 F300\nBED_MESH_RAPID_CALIBRATE\nG1 X67.5 Y50 F6000\nG1 Z0.6 F300\nM109 S[nozzle_temperature_initial_layer] ; wait for nozzle temp to stabilize\nG92 E0 ;Reset Extruder\nG1 X67.5 Y100 Z0.6 F300 ;Move to start position\nG1 X167.5 E35 F400 ;Draw the first line\nG1 Z0.8 F120.0 ;Move to side a little\nG1 X162.5 F3000\nG92 E0 ;Reset Extruder\n;LAYER_COUNT:[total_layer_count]\n;LAYER:0",
+    "machine_tool_change_time": "0",
+    "machine_unload_filament_time": "29",
+    "manual_filament_change": "0",
+    "max_layer_height": [
+        "0.42"
+    ],
+    "min_layer_height": [
+        "0.12"
+    ],
+    "name": "Jcw Giga 0.6 nozzle",
+    "nozzle_diameter": [
+        "0.6"
+    ],
+    "nozzle_height": "4.76",
+    "nozzle_hrc": "0",
+    "nozzle_type": "hardened_steel",
+    "nozzle_volume": "107",
+    "parking_pos_retraction": "92",
+    "pellet_modded_printer": "0",
+    "preferred_orientation": "0",
+    "printable_area": [
+        "0x0",
+        "810x0",
+        "810x805",
+        "0x805"
+    ],
+    "printable_height": "1010",
+    "printer_model": "Elegoo OrangeStorm Giga",
+    "printer_notes": "",
+    "printer_settings_id": "Jcw Giga 0.6 nozzle",
+    "printer_structure": "i3",
+    "printer_technology": "FFF",
+    "printer_variant": "1.0",
+    "printhost_authorization_type": "key",
+    "printhost_ssl_ignore_revoke": "0",
+    "printing_by_object_gcode": "",
+    "purge_in_prime_tower": "1",
+    "retract_before_wipe": [
+        "0%"
+    ],
+    "retract_length_toolchange": [
+        "0.8"
+    ],
+    "retract_lift_above": [
+        "0"
+    ],
+    "retract_lift_below": [
+        "1010"
+    ],
+    "retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "retract_on_top_layer": [
+        "1"
+    ],
+    "retract_restart_extra": [
+        "0"
+    ],
+    "retract_restart_extra_toolchange": [
+        "0"
+    ],
+    "retract_when_changing_layer": [
+        "1"
+    ],
+    "retraction_distances_when_cut": [
+        "18"
+    ],
+    "retraction_length": [
+        "0.5"
+    ],
+    "retraction_minimum_travel": [
+        "1"
+    ],
+    "retraction_speed": [
+        "35"
+    ],
+    "scan_first_layer": "0",
+    "silent_mode": "0",
+    "single_extruder_multi_material": "1",
+    "support_air_filtration": "1",
+    "support_chamber_temp_control": "1",
+    "support_multi_bed_types": "0",
+    "template_custom_gcode": "",
+    "thumbnails": "400x400/COLPIC, 114x114/COLPIC, 160x160/PNG",
+    "thumbnails_format": "COLPIC",
+    "time_cost": "2",
+    "time_lapse_gcode": "",
+    "travel_slope": [
+        "3"
+    ],
+    "upward_compatible_machine": [],
+    "use_firmware_retraction": "0",
+    "use_relative_e_distances": "1",
+    "version": "2.3.0.3",
+    "wipe": [
+        "1"
+    ],
+    "wipe_distance": [
+        "2"
+    ],
+    "z_hop": [
+        "0.4"
+    ],
+    "z_hop_types": [
+        "Auto Lift"
+    ],
+    "z_offset": "0"
+}
