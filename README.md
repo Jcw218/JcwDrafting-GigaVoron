@@ -20,7 +20,7 @@ Included in this data pacakge:
 - Config for Octopus Pro motherboard upgrade and Stealthburner printer head
 - Additional code and details for Obico Monitoring
 - Adapter plate for nema 23 X axis upgrade
-- Coming soon: Oem 10.2" TJC Touch Screen Firmware package for integration with new upgrades
+- Coming soon: Oem 10.1" TJC Touch Screen Firmware package for integration with new upgrades
 
 Feel like buying me a coffee?
 
