@@ -1,8 +1,9 @@
 ####################################################################################
-# Machine type: JcwGiga
-# Current configuration version: VBeta
-# Date：2025-9-11
-## BTT Pi V1.2 - Octopus pro V1.1 - EBB SB2209-RP2040 ##
+### Machine type: JcwGiga
+### Current configuration version: VBeta
+### Date：2025-9-11
+### BTT Pi V1.2 - Octopus pro V1.1 - EBB SB2209-RP2040
+### OEM Stepper Motors and Stock Stepper Drivers
 ####################################################################################
 
 This is a Tutorial on how to install this repositories operating system to a BTT pi V1.2 and configure it for the Elegoo Orangestorm Giga
@@ -37,13 +38,33 @@ Removing the Mother board cover panel on the right side of the machine as detail
     
     <img width="500" height="337" alt="image6" src="https://github.com/user-attachments/assets/a73b4bb2-9714-4541-9b02-34361c9c054b" />
 
-    <img width="927" height="451" alt="Motherboard sch" src="https://github.com/user-attachments/assets/b9495655-b344-432c-8d53-b7d9055548b2" />
+
+    <img width="827" height="451" alt="Motherboard sch" src="https://github.com/user-attachments/assets/b9495655-b344-432c-8d53-b7d9055548b2" />
 
   - Disconnect all ribbon cables from the ports on the motherboard. Use a 2.0mm Allen wrench to loosen the 4 screws securing the motherboard, and remove the old motherboard.
 
     <img width="500" height="337" alt="image7" src="https://github.com/user-attachments/assets/3fdefb3a-fa33-4673-b1bf-ab85412b1b9d" />
 
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
+
+
+  - Plug in the cables to the octopus pro using the following schematic.
+
+    <img width="812" height="638" alt="Octopus pro wiring schematic (GIGA) (OEM)" src="https://github.com/user-attachments/assets/5d6a3578-6b25-4247-8155-f7eac3431f15" />
+
+
+    - UART_NOTE 1: Pull the black Jumper clips from the octopus pro board to match the following SPI Diagram.
+      
+      <img width="906" height="302" alt="Octopus pro UART" src="https://github.com/user-attachments/assets/7e1fb2d7-856d-4732-9176-db69700746eb" />
+
+    - STEPPER_NOTE 2: Pull the Black Jumper clips from the ocotopus pro board and place them back to match the following STEPPER Diagram.
+
+      <img width="742" height="276" alt="Octopus pro STEPPER" src="https://github.com/user-attachments/assets/031b3f87-d50a-4f40-a88b-64adb8a7bfa3" />
+
+    - FAN_POW NOTE 3: Pull the Black Jumper Clips from the octopus pro board and place them back to match the following FAN POW Diagram.
+
+      <img width="902" height="270" alt="FAN POW" src="https://github.com/user-attachments/assets/e7faba67-6708-4eb5-881c-e60e6026d6d8" />
+
 
     
 
