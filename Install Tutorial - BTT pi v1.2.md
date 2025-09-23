@@ -6,7 +6,7 @@
 ### OEM Stepper Motors and Stock Stepper Drivers
 ####################################################################################
 
-This is a Tutorial on how to install this repositories operating system to a BTT pi V1.2 and configure it for the Elegoo Orangestorm Giga
+This is a Tutorial on how to install this repositories operating system to a BTT pi V1.2 and configure it for the Elegoo Orangestorm Giga manually
 
 Step 1:
 Ensure that your Giga is turned off and isolated from power. You may also want to wait a day to ensure that the capacitors are drained of electricity and are safe to touch.
@@ -95,6 +95,11 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
   - You will be prompted for a username and password. Enter in biqu for username and for password: biqu. don't worry if the password doesn't show on the screen, it's hidden from view by default.
 
   - Next is the intimidating coding portion of this build.
+    - copy this next code and right click anywhere on the putty program:
+      
+      sudo nano /etc/apt/sources.list
+    - modify it to look like the following image: 
+      
     - copy this and right click anywhere on the putty program:
       
        ./kiauh/kiauh.sh
@@ -105,10 +110,13 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
       ./kiauh/kiauh.sh
       
     - type 4 for no and remeber my choice
+    - type 1 for install ENTER
+    - (OPTIONAL INSTALL) type 9 for obico ENTER
+    - (OPTIONAL CONFIG) run through the process of setting up your obico account and link it by using the code or the search function in the phone app
+    - type B for back ENTER
     - type 2 for update ENTER
-    - type 1 for updating klipper ENTER
-    - once finished select 2 for updating moonraker ENTER
-    - once finished select 
+    - type a Update all ENTER
+    - if prompted for anything type ENTER for the default option
   
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
 
