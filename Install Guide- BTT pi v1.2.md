@@ -61,7 +61,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
   - Insert a spare micro SD card into your computer, preferably of a 32-64gb storage size.
 
-  - Open Raspberry pi imager, imput the following settings: Raspberry Pi Devices: No Filtering, Operating system: (Use custom)CB1_Debian12_minimal_kernel6.6_20241219.img.xz, Storage:GENERIC MASSSTORAGECLASS USB       Device - 32-64gb SD card
+  - Open Raspberry pi imager, input the following settings: Raspberry Pi Devices: No Filtering, Operating system: (Use custom)CB1_Debian12_minimal_kernel6.6_20241219.img.xz, Storage:GENERIC MASSSTORAGECLASS USB       Device - 32-64gb SD card
 
     <img width="674" height="475" alt="raspberry pi imager settings" src="https://github.com/user-attachments/assets/06b40e73-c0e7-4258-9611-7f1aba24915b" />
 
