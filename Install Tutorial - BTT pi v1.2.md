@@ -98,6 +98,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - copy this next code and right click anywhere on the putty program:
       
       sudo nano /etc/apt/sources.list
+      
     - modify it to look like the following image: 
       
     - copy this and right click anywhere on the putty program:
@@ -109,13 +110,13 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
       
       ./kiauh/kiauh.sh
       
-    - type 4 for no and remeber my choice
-    - type 1 for install ENTER
-    - (OPTIONAL INSTALL) type 9 for obico ENTER
+    - type "4" for no and remeber my choice
+    - type "1" for install ENTER
+    - (OPTIONAL INSTALL) type "9" for obico ENTER
     - (OPTIONAL CONFIG) run through the process of setting up your obico account and link it by using the code or the search function in the phone app
-    - type B for back ENTER
-    - type 2 for update ENTER
-    - type a Update all ENTER
+    - type "B" for back ENTER
+    - type "2" for update ENTER
+    - type "a" Update all ENTER
     - if prompted for anything type ENTER for the default option
   
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
