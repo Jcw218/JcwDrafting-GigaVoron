@@ -49,10 +49,68 @@ Removing the Motherboard and marking the wires as per the images below:
     <img width="500" height="337" alt="image7" src="https://github.com/user-attachments/assets/3fdefb3a-fa33-4673-b1bf-ab85412b1b9d" />
 
 Step 4:
-Install Klipper onto Big Tree Tech pi V1.2
+Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree tech boards EBB SB2209 and the BTT Eddy
 
+  - Download Raspberry pi imager: https://downloads.raspberrypi.com/imager/imager_latest.exe
+
+    <img width="529" height="390" alt="raspberry pi imager" src="https://github.com/user-attachments/assets/c82e8f09-80ab-4e18-8b2b-f6fc7f5126fe" />
+
+  - Download the latest BTT CB1 pi image (CB1_Debian12_minimal_kernel6.6_20241219.img.xz) here: https://github.com/bigtreetech/CB1/releases
+
+   <img width="1180" height="445" alt="CB1 image" src="https://github.com/user-attachments/assets/ca2df115-eac9-46ef-8507-2e35f37b629f" />
+
+  - Insert a spare micro SD card into your computer, preferably of a 32-64gb storage size.
+
+  - Open Raspberry pi imager, imput the following settings: Raspberry Pi Devices: No Filtering, Operating system: (Use custom)CB1_Debian12_minimal_kernel6.6_20241219.img.xz, Storage:GENERIC MASSSTORAGECLASS USB       Device - 32-64gb SD card
+
+    <img width="674" height="475" alt="raspberry pi imager settings" src="https://github.com/user-attachments/assets/06b40e73-c0e7-4258-9611-7f1aba24915b" />
+
+  - Hit next than edit settings with your wireless LAN name, password, Set username and password to user: biqu password: biqu, Set hostname to Jcwgiga.local and ensure your wireless LAN country is selected, time      zone and keyboard is correct. Next select the Services tab and enable SSH and Use password authentication. After this hit save and then YES to start the writing process. It may take a few minutes.
+
+  - Once complete, open "This PC" (if using windows), select the boot partition of the sd card and open the system.cfg file.
+     - Remove the # from hostname and input: "Jcwgiga" instead of "BIGTREETECH-CB1"
+     - change the wifi settings to match your wifi settings.
+     - hit save and close
+
+      <img width="772" height="796" alt="btt config setting" src="https://github.com/user-attachments/assets/e0066c66-92d6-470b-b5f4-86853d098569" />
+       
+  - Next open the armbianEnv.txt file located in the same folder
+     - Change console=display to equal console=serial
+     - hit save and close
+
+      <img width="889" height="931" alt="ArmbianEnv" src="https://github.com/user-attachments/assets/dfa0b091-9558-47c2-8dbe-ac014f296e65" />
+
+  - Take out the SD card and insert it into the BTT pi. Plug the Usb C cable from the BTT pi v1.2 into the computer ensuring that the black jumper clip is installed as per the image:
+
+    <img width="654" height="410" alt="BTT PI" src="https://github.com/user-attachments/assets/af26eb92-5f27-4b56-92a7-c2333a6221a8" />
+
+  - Either wait for the wifi to connect or plug in an RJ45 Ethernet cable for internet access.
+
+  - Download and install putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+  - Open putty and enter in Jcwgiga.local as the Host Name (or IP address), connection type is SSH and port is 22
+
+    <img width="445" height="438" alt="putty" src="https://github.com/user-attachments/assets/7c520e49-7b6d-492e-85f8-9f43172ec056" />
+
+  - You will be prompted for a username and password. Enter in biqu for username and for password: biqu. don't worry if the password doesn't show on the screen, it's hidden from view by default.
+
+  - Next is the intimidating coding portion of this build.
+    - copy this and right click anywhere on the putty program:
+      
+       ./kiauh/kiauh.sh
+      
+    - Select Y to keep kiauh up to date.
+    - Enter the previous command in again:
+      
+      ./kiauh/kiauh.sh
+      
+    - type 4 for no and remeber my choice
+    - type 2 for update ENTER
+    - type 1 for updating klipper ENTER
+    - once finished select 2 for updating moonraker ENTER
+    - once finished select 
+  
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
-
 
   - Plug in the cables to the octopus pro using the following schematic.
 
