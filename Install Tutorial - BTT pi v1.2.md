@@ -34,6 +34,9 @@ Removing the Mother board cover panel on the right side of the machine as detail
     
     <img width="554" height="393" alt="image4" src="https://github.com/user-attachments/assets/446f7bd5-e3a6-4948-93ba-e092bb492e5a" />
 
+Step 3:
+Removing the Motherboard and marking the wires as per the images below:
+
   - Use cable ties or label paper to mark the ribbon cables that lack original markings, ensuring they correspond to the port names on the motherboard.
     
     <img width="500" height="337" alt="image6" src="https://github.com/user-attachments/assets/a73b4bb2-9714-4541-9b02-34361c9c054b" />
@@ -45,13 +48,15 @@ Removing the Mother board cover panel on the right side of the machine as detail
 
     <img width="500" height="337" alt="image7" src="https://github.com/user-attachments/assets/3fdefb3a-fa33-4673-b1bf-ab85412b1b9d" />
 
+Step 4:
+Install Klipper onto Big Tree Tech pi V1.2
+
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
 
 
   - Plug in the cables to the octopus pro using the following schematic.
 
-    <img width="812" height="638" alt="Octopus pro wiring schematic (GIGA) (OEM)" src="https://github.com/user-attachments/assets/5d6a3578-6b25-4247-8155-f7eac3431f15" />
-
+    <img width="812" height="638" alt="Octopus pro wiring schematic (GIGA) (OEM)" src="https://github.com/user-attachments/assets/728e2caf-7e6d-4b78-9b0a-e04a16d692f2" />
 
     - UART_NOTE 1: Pull the black Jumper clips from the octopus pro board to match the following SPI Diagram.
       
@@ -64,6 +69,8 @@ Removing the Mother board cover panel on the right side of the machine as detail
     - FAN_POW NOTE 3: Pull the Black Jumper Clips from the octopus pro board and place them back to match the following FAN POW Diagram.
 
       <img width="902" height="270" alt="FAN POW" src="https://github.com/user-attachments/assets/e7faba67-6708-4eb5-881c-e60e6026d6d8" />
+
+  -
 
 
     
