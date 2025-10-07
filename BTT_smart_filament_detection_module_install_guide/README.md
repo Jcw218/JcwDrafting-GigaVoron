@@ -18,7 +18,7 @@
 6. Enter the IP address of your printer into google chrome and hit enter. You'll be greeted by the Fluidd Interface.
   <img width="979" height="321" alt="Screenshot 2025-10-07 171143" src="https://github.com/user-attachments/assets/8681a0fe-df6e-47dd-9833-0e9c0e055a2e" />
 
-7. Located the Configuration tab on the left side of the Interface.
+7. Locate the Configuration tab on the left side of the Interface.
   <img width="246" height="209" alt="Screenshot 2025-10-07 171310" src="https://github.com/user-attachments/assets/aad3aa21-0827-4ac4-97f8-e15b9b0f4a6c" />
 
 8. Double left click on the printer.cfg file
