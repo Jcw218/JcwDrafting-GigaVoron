@@ -29,4 +29,4 @@
 10. type # to uncomment this code or delete this code and then type in the following instead:
   <img width="502" height="491" alt="Screenshot 2025-10-07 130252" src="https://github.com/user-attachments/assets/c21ce4a3-e2fb-429c-8674-ec0f9ecf89f2" />
 
-11. 
+11. PD5 is the incorrect swtich_pin id. located you pins.h file and determine the right ID to enter in the place of PD5. The encorder pin detects if the filament is running through the switch and is very handy to determine whether your first layer is accurate or whether you have a clogged nozzle.
