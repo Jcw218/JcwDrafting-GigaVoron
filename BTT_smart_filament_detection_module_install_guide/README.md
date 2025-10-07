@@ -1,4 +1,4 @@
-### Guide to Installing the BTT smart filament detection module to the original Elegoo Orangestorm Giga Motherboard V3
+## Guide to Installing the BTT smart filament detection module to the original Elegoo Orangestorm Giga Motherboard V3
 ![558768329_10235050453376534_4001759081982270624_n](https://github.com/user-attachments/assets/cc95c257-0e1e-401f-a7be-dd5bf1ecd554)
 
 1. Firslty, figure out where you want the sensor. If the sensor is too far away from the print head, it may trigger more regularly than if the sensor was placed closer to the print head.
