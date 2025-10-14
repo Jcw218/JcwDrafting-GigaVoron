@@ -131,7 +131,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
     - STEPPER_NOTE 2: Pull the Black Jumper clips from the ocotopus pro board and place them back to match the following STEPPER Diagram.
 
-      <img width="742" height="276" alt="Octopus pro STEPPER" src="https://github.com/user-attachments/assets/031b3f87-d50a-4f40-a88b-64adb8a7bfa3" />
+      <img width="1006" height="302" alt="Octopus pro UART" src="https://github.com/user-attachments/assets/d6bde2bf-9fc4-46aa-9d31-8e8c24023f99" />
 
     - FAN_POW NOTE 3: Pull the Black Jumper Clips from the octopus pro board and place them back to match the following FAN POW Diagram.
 
