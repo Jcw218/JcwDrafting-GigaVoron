@@ -1,0 +1,349 @@
+# elegoo_conf.ini Version：V1.4-202400420
+# Machine type：OrangeStorm Giga
+
+[filament_th_target]
+pla                            = 205
+abs                            = 240
+petg                           = 220
+tpu                            = 230
+level                          = 140
+pid_tmp                        = 170
+
+[filament_tb_target]
+pla                            = 60
+abs                            = 80
+petg                           = 70
+tpu                            = 50
+level                          = 60
+
+[printer_offset]
+z_offset					   = 0
+if_use_pe_switch	           = 1
+if_auto_save_zoffset           = 1
+probe_zoffset                  = 0.0
+min_zoffset                     = -11.5
+max_zoffset                     = 1050.0
+
+[elegoo_model]
+model                          = 3
+hwbdv                          = 2.0
+
+[printer]
+max_velocity                   = 500
+max_accel                      = 20000
+max_accel_to_decel             = 10000
+machine_use_extruders          = 1
+en_copy_extruters_file         = 1
+wlan0_status                   = 1
+fila_sensor_status             = 1
+
+[plr_print]
+plr_file                       = elegoo
+plr_file_estime                = 0
+plr_process                    = 0.0
+plr_fun_status                 = 1
+
+[z_tilt]
+z_tilt_after_home_enable       = 0
+z_tile_before_leveling_enable  = 0
+
+[manual_level]
+p1_x                           = 30.0
+p1_y                           = 30.0
+p2_x                           = 30.0
+p2_y                           = 210.0
+p3_x                           = 30.0
+p3_y                           = 385.0
+p4_x                           = 385.0
+p4_y                           = 385.0
+p5_x                           = 385.0
+p5_y                           = 210.0
+p6_x                           = 385.0
+p6_y                           = 30.0
+move_speed                     = 5000
+probe_up_z                     = 30
+probe_speed                    = 10
+pre_heat_extruder              = 0
+pre_heat_bed                   = 0
+z_of_pre_heat                  = 30
+x1                             =785.5
+y1                             = 63
+x2                             = 620.5
+y2                             = 63
+x3                             = 455.5
+y3                             = 63
+x4                             = 455.5
+y4                             = 228
+x5                             = 620.5
+y5                             = 203
+x6                             = 785.5
+y6                             = 228
+x7                             = 785.5
+y7                             = 393
+x8                             = 620.5
+y8                             = 393
+x9                             = 455.5
+y9                             = 393
+x10                             = 375
+y10                             = 63
+x11                             = 210
+y11                             = 63
+x12                             = 45
+y12                             = 63
+x13                             = 45
+y13                             = 228
+x14                             = 210
+y14                             = 203
+x15                             = 375
+y15                             = 228
+x16                             = 375
+y16                             = 393
+x17                             = 210
+y17                             = 393
+x18                             = 45
+y18                             = 393
+x19                             = 375
+y19                             = 473
+x20                             = 210
+y20                             = 473
+x21                             = 45
+y21                             = 473
+x22                             = 45
+y22                             = 638
+x23                             = 210
+y23                             = 613
+x24                             = 375
+y24                             = 638
+x25                             = 375
+y25                             = 803
+x26                             = 210
+y26                             = 803
+x27                             = 45
+y27                             = 803
+x28                             = 785.5
+y28                             = 473
+x29                             = 620.5
+y29                             = 473
+x30                             = 455.5
+y30                             = 473
+x31                             = 455.5
+y31                             = 638
+x32                             = 620.5
+y32                             = 613
+x33                             = 785.5
+y33                             = 638
+x34                             = 785.5
+y34                             = 803
+x35                             = 620.5
+y35                             = 803
+x36                             = 455.5
+y36                             = 803
+
+
+[speed_adaptive]
+sp_adap_status=1
+z1                             = 0.2
+z2                             = 50
+z3                             = 100
+z4                             = 200
+z5                             = 300
+z6                             = 400
+z7                             = 450
+z8                             = 480
+z9                             = 500
+z10                            = 550
+z11                            = 600
+z12                            = 650
+z13                            = 680
+z14                            = 700
+z15                            = 750
+z16                            = 800
+z17                            = 830
+z18                            = 850
+z19                            = 900
+z20                            = 950
+a1                             = 3500.0
+a2                             = 3050.0
+a3                             = 2810.0
+a4                             = 2570.0
+a5                             = 2330.0
+a6                             = 2090.0
+a7                             = 1970.0
+a8                             = 1850.0
+a9                             = 1730.0
+a10                            = 1610.0
+a11                            = 1490.0
+a12                            = 1370.0
+a13                            = 1250.0
+a14                            = 1130.0
+a15                            = 1010.0
+a16                            = 890.0
+a17                            = 870.0
+a18                            = 850.0
+a19                            = 830.0
+a20                            = 810.0
+b1                             = 3100.0
+b2                             = 2600.0
+b3                             = 2400.0
+b4                             = 2200.0
+b5                             = 2000.0
+b6                             = 1700.0
+b7                             = 1600.0
+b8                             = 1500.0
+b9                             = 1400.0
+b10                            = 1300.0
+b11                            = 1200.0
+b12                            = 1150.0
+b13                            = 1060.0
+b14                            = 1050.0
+b15                            = 999.0
+b16                            = 7800.0
+b17                            = 770.0
+b18                            = 760.0
+b19                            = 750.0
+b20                            = 700.0
+v1                             = 300.0
+v2                             = 290.0
+v3                             = 280.0
+v4                             = 270.0
+v5                             = 260.0
+v6                             = 250.0
+v7                             = 240.0
+v8                             = 230.0
+v9                             = 220.0
+v10                            = 210.0
+v11                            = 200.0
+v12                            = 190.0
+v13                            = 180.0
+v14                            = 170.0
+v15                            = 160.0
+v16                            = 150.0
+v17                            = 140.0
+v18                            = 130.0
+v19                            = 120.0
+v20                            = 110.0
+
+
+[input_shaper]
+shapper_position_x    =400
+shapper_position_y    =400
+shaper_z1                      = 100
+shaper_z2                      = 600
+shaper_z3                      = 700
+shaper_z4                      = 800
+shaper_z5                      = 900
+shaper_z6                      = 300
+shaper_z7                      = 350
+shaper_z8                      = 400
+shaper_z9                      = 450
+shaper_z10                     = 500
+shaper_z11                     = 550
+shaper_z12                     = 600
+shaper_z13                     = 650
+shaper_z14                     = 700
+shaper_z15                     = 750
+shaper_z16                     = 800
+shaper_z17                     = 850
+shaper_z18                     = 900
+shaper_z19                     = 950
+shaper_z20                     = 1000
+
+shaper_type_x_z1               = ei
+shaper_freq_x_z1               = 39.2
+shaper_type_y_z1               = ei
+shaper_freq_y_z1               = 25.6
+
+shaper_type_x_z2               = ei
+shaper_freq_x_z2               = 39.2
+shaper_type_y_z2               = ei
+shaper_freq_y_z2               = 25.6
+
+shaper_type_x_z3               = ei
+shaper_freq_x_z3               = 36.0
+shaper_type_y_z3               = ei
+shaper_freq_y_z3               = 23.0
+
+shaper_type_x_z4               = ei
+shaper_freq_x_z4               = 36.0
+shaper_type_y_z4               = ei
+shaper_freq_y_z4               = 23.0
+
+shaper_type_x_z5               = ei
+shaper_freq_x_z5               = 36.8
+shaper_type_y_z5               = ei
+shaper_freq_y_z5               = 23.0
+
+shaper_type_x_z6               = ei
+shaper_freq_x_z6               = 35.0
+shaper_type_y_z6               = ei
+shaper_freq_y_z6               = 23.0
+
+shaper_type_x_z7               = ei
+shaper_freq_x_z7               = 36.8
+shaper_type_y_z7               = ei
+shaper_freq_y_z7               = 23.0
+
+shaper_type_x_z8               = ei
+shaper_freq_x_z8               = 35.6
+shaper_type_y_z8               = ei
+shaper_freq_y_z8               = 25.0
+
+shaper_type_x_z9               = ei
+shaper_freq_x_z9               = 36.0
+shaper_type_y_z9               = ei
+shaper_freq_y_z9               = 23.4
+
+shaper_type_x_z10              = ei
+shaper_freq_x_z10              = 35.0
+shaper_type_y_z10              = ei
+shaper_freq_y_z10              = 25.6
+
+shaper_type_x_z11              = ei
+shaper_freq_x_z11              = 34.6
+shaper_type_y_z11              = ei
+shaper_freq_y_z11              = 25.8
+
+shaper_type_x_z12              = 2hump_ei
+shaper_freq_x_z12              = 34.4
+shaper_type_y_z12              = 2hump_ei
+shaper_freq_y_z12              = 26.0
+
+shaper_type_x_z13              = 2hump_ei
+shaper_freq_x_z13              = 35.8
+shaper_type_y_z13              = 2hump_ei
+shaper_freq_y_z13              = 24.0
+
+shaper_type_x_z14              = 2hump_ei
+shaper_freq_x_z14              = 33.0
+shaper_type_y_z14              = 2hump_ei
+shaper_freq_y_z14              = 26.4
+
+shaper_type_x_z15              = 2hump_ei
+shaper_freq_x_z15              = 35.4
+shaper_type_y_z15              = 2hump_ei
+shaper_freq_y_z15              = 24.2
+
+shaper_type_x_z16              = 2hump_ei
+shaper_freq_x_z16              = 33.4
+shaper_type_y_z16              = 2hump_ei
+shaper_freq_y_z16              = 26.4
+
+shaper_type_x_z17              = 2hump_ei
+shaper_freq_x_z17              = 35.0
+shaper_type_y_z17              = 2hump_ei
+shaper_freq_y_z17              = 24.2
+
+shaper_type_x_z18              = 2hump_ei
+shaper_freq_x_z18              = 33.4
+shaper_type_y_z18              = 2hump_ei
+shaper_freq_y_z18              = 26.4
+
+shaper_type_x_z19               = 2hump_ei
+shaper_freq_x_z19               = 36.4
+shaper_type_y_z19               = 2hump_ei
+shaper_freq_y_z19               = 24.2
+
+shaper_type_x_z20               = 2hump_ei
+shaper_freq_x_z20               = 36.4
+shaper_type_y_z20               = 2hump_ei
+shaper_freq_y_z20               = 24.2

@@ -1,0 +1,10 @@
+[plr_data]
+plr_process=0.0
+power_resume_z=0.0
+power_resume_e=0.0
+file_pos=0
+extruder_target=0
+heater_bed_target=0
+power_resume_x=0.0
+power_resume_y=0.0
+
