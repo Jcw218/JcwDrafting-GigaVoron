@@ -47,3 +47,10 @@ Removing the Motherboard and marking the wires as per the images below:
   - Disconnect all ribbon cables from the ports on the motherboard. Use a 2.0mm Allen wrench to loosen the 4 screws securing the motherboard, and remove the old motherboard.
 
     <img width="500" height="337" alt="image7" src="https://github.com/user-attachments/assets/3fdefb3a-fa33-4673-b1bf-ab85412b1b9d" />
+
+Step 4:
+Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree tech boards EBB SB2209 and the BTT Eddy
+
+  - Download Raspberry pi imager: https://downloads.raspberrypi.com/imager/imager_latest.exe
+
+    <img width="529" height="390" alt="raspberry pi imager" src="https://github.com/user-attachments/assets/c82e8f09-80ab-4e18-8b2b-f6fc7f5126fe" />
