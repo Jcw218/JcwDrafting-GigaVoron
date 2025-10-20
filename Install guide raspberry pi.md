@@ -54,3 +54,7 @@ Install Klipper onto Raspberry pi 3/4, Octopus Pro V1.1 and the Big tree tech bo
   - Download Raspberry pi imager: https://downloads.raspberrypi.com/imager/imager_latest.exe
 
     <img width="529" height="390" alt="raspberry pi imager" src="https://github.com/user-attachments/assets/c82e8f09-80ab-4e18-8b2b-f6fc7f5126fe" />
+
+  - Insert a spare micro SD card into your computer, preferably of a 32-64gb storage size.
+
+  - Select 
