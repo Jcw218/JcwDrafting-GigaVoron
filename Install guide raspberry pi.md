@@ -49,7 +49,7 @@ Removing the Motherboard and marking the wires as per the images below:
     <img width="500" height="337" alt="image7" src="https://github.com/user-attachments/assets/3fdefb3a-fa33-4673-b1bf-ab85412b1b9d" />
 
 Step 4:
-Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree tech boards EBB SB2209 and the BTT Eddy
+Install Klipper onto Raspberry pi 3/4, Octopus Pro V1.1 and the Big tree tech boards EBB SB2209 and the BTT Eddy
 
   - Download Raspberry pi imager: https://downloads.raspberrypi.com/imager/imager_latest.exe
 
