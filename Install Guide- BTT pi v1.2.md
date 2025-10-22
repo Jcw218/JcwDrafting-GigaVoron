@@ -98,8 +98,8 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - copy this next code and right click anywhere on the putty program:
       
       sudo apt update
-      sudo apt upgrade
-      sudo apt install python3 python3-serial
+        sudo apt upgrade
+          sudo apt install python3 python3-serial
 
       If you get an error along the lines of “unable to locate package python3-serial” then you may be on an older version of linux.
 
@@ -118,7 +118,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - copy this next code and right click anywhere in putty to paste, then hit enter.
    
       cd ~/katapult
-      make menuconfig
+        make menuconfig
 
     - you'll then be greeted with the klipperconfig screen. locate your motherboard config settings here and fill in the right values for your board: https://canbus.esoterical.online/mainboard_flashing/common_hardware.html
     
@@ -127,7 +127,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - press q to quit and save the config. then copy this code and right click anywhere in putty and press enter.
    
       make clean
-      make
+        make
 
     - To flash, connect your mainboard to the Pi via USB then put the mainboard into DFU/BOOT mode (your mainboard user manual should have instructions on doing this).
 
@@ -142,8 +142,8 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - next copy and paste this code into putty. Please note that the 8 digits at the end of this code will be the same as your board digits as listed in the previous step.
    
       cd ~/katapult
-      make
-      sudo dfu-util -R -a 0 -s 0x08000000:mass-erase:force:leave -D ~/katapult/out/katapult.bin -d 0483:df11
+        make
+          sudo dfu-util -R -a 0 -s 0x08000000:mass-erase:force:leave -D ~/katapult/out/katapult.bin -d 0483:df11
 
       
     - copy this and right click anywhere on the putty program:
