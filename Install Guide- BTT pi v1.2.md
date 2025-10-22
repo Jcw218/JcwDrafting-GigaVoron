@@ -61,11 +61,13 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
   - Insert a spare micro SD card into your computer, preferably of a 32-64gb storage size.
 
-  - Open Raspberry pi imager, input the following settings: Raspberry Pi Devices: No Filtering, Operating system: (Use custom)CB1_Debian12_minimal_kernel6.6_20241219.img.xz, Storage:GENERIC MASSSTORAGECLASS USB       Device - 32-64gb SD card
+  - Open Raspberry pi imager, input the following settings: Raspberry Pi Devices: No Filtering, Operating system: (Use custom)CB1_Debian12_minimal_kernel6.6_20241219.img.xz, Storage:GENERIC MASSSTORAGECLASS USB Device - 32-64gb SD card
 
     <img width="674" height="475" alt="raspberry pi imager settings" src="https://github.com/user-attachments/assets/06b40e73-c0e7-4258-9611-7f1aba24915b" />
 
-  - Hit next than edit settings with your wireless LAN name, password, Set username and password to user: biqu password: biqu, Set hostname to Jcwgiga.local and ensure your wireless LAN country is selected, time      zone and keyboard is correct. Next select the Services tab and enable SSH and Use password authentication. After this hit save and then YES to start the writing process. It may take a few minutes.
+  - Hit next than edit settings with your wireless LAN name, password, Set username and password to user: biqu password: biqu, Set hostname to Jcwgiga.local and ensure your wireless LAN country is selected, time zone and keyboard is correct.
+
+  - Next select the Services tab and enable SSH and Use password authentication. After this hit save and then YES to start the writing process. It may take a few minutes.
 
   - Once complete, open "This PC" (if using windows), select the boot partition of the sd card and open the system.cfg file.
      - Remove the # from hostname and input: "Jcwgiga" instead of "BIGTREETECH-CB1"
@@ -100,7 +102,7 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
       uname -a
 
-    -next copy and paste the next line of code and right click anywhere in putty. hit enter:
+    - next copy and paste the next line of code and right click anywhere in putty. hit enter:
 
       sudo systemctl enable systemd-networkd
 
