@@ -98,8 +98,10 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
     - copy this next code and right click anywhere on the putty program:
       
       sudo apt update
-        sudo apt upgrade
-          sudo apt install python3 python3-serial
+      
+      sudo apt upgrade
+      
+      sudo apt install python3 python3-serial
 
       If you get an error along the lines of “unable to locate package python3-serial” then you may be on an older version of linux.
 
