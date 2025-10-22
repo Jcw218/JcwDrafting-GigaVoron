@@ -94,12 +94,42 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
   - You will be prompted for a username and password. Enter in biqu for username and for password: biqu. don't worry if the password doesn't show on the screen, it's hidden from view by default.
 
-  - Next is the intimidating coding portion of this build.
+  - Next is the intimidating coding portion of this build. (follow esoterical guide for installing klipper in CANBus bridge mode: https://canbus.esoterical.online/mainboard_flashing)
     - copy this next code and right click anywhere on the putty program:
       
-      sudo nano /etc/apt/sources.list
-      
-    - modify it to look like the following image: 
+      sudo apt update
+      sudo apt upgrade
+      sudo apt install python3 python3-serial
+
+      If you get an error along the lines of “unable to locate package python3-serial” then you may be on an older version of linux.
+
+      In that case, run:
+
+      sudo apt install python3-pip
+
+      then
+
+      pip3 install pyserial
+
+    - copy this next code and right click anywhere in putty to paste, then hit enter.
+   
+      test -e ~/katapult && (cd ~/katapult && git pull) || (cd ~ && git clone https://github.com/Arksine/katapult) ; cd ~
+
+    - copy this next code and right click anywhere in putty to paste, then hit enter.
+   
+      cd ~/katapult
+      make menuconfig
+
+    - you'll then be greeted with the klipperconfig screen. locate your motherboard config settings here and fill in the right values for your board: https://canbus.esoterical.online/mainboard_flashing/common_hardware.html
+    
+      <img width="702" height="246" alt="301052290-5434691f-2d97-4d75-9067-d7501c2a2214" src="https://github.com/user-attachments/assets/ecac5a1d-a7e2-4ea1-9319-5c50cc37f12b" />
+    
+    - press q to quit and save the config. then copy this code and right click anywhere in putty and press enter.
+   
+      make clean
+      make
+
+    - 
       
     - copy this and right click anywhere on the putty program:
       
