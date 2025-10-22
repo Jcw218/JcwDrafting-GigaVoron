@@ -88,13 +88,66 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
 
   - Download and install putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
-  - Open putty and enter in Jcwgiga.local as the Host Name (or IP address), connection type is SSH and port is 22
+  - Open putty and enter in Jcwgiga.local (or whatever you'd like to set it as) as the Host Name (or IP address), connection type is SSH and port is 22
 
     <img width="445" height="438" alt="putty" src="https://github.com/user-attachments/assets/7c520e49-7b6d-492e-85f8-9f43172ec056" />
 
   - You will be prompted for a username and password. Enter in biqu for username and for password: biqu. don't worry if the password doesn't show on the screen, it's hidden from view by default.
 
   - Next is the intimidating coding portion of this build. (follow esoterical guide for installing klipper in CANBus bridge mode: https://canbus.esoterical.online/mainboard_flashing)
+
+    - In order to create the CAN network, copy and paste the next line of code into putty:
+
+      uname -a
+
+    -next copy and paste the next line of code and right click anywhere in putty. hit enter:
+
+      sudo systemctl enable systemd-networkd
+
+    - Then copy and paste the next line of code and right click anywhere in putty. hit enter:
+   
+      sudo systemctl start systemd-networkd
+
+    - Next check that the service is running by copying and pasting the next line of code in putty. hit enter:
+   
+      systemctl | grep systemd-networkd
+
+      <img width="507" height="64" alt="396017770-901096ef-29c8-4abc-8191-8d6c6aec9010" src="https://github.com/user-attachments/assets/fdfa05ba-59a6-4345-a062-44d3cf13d24c" />
+
+    - Next copy the next line of code and right click anywhere in putty. hit enter:
+
+      sudo systemctl disable systemd-networkd-wait-online.service
+
+    - Next copy the next line of code and right click anywhere in putty. hit enter:
+   
+      echo -e 'SUBSYSTEM=="net", ACTION=="change|add", KERNEL=="can*"  ATTR{tx_queue_len}="128"' | sudo tee /etc/udev/rules.d/10-can.rules > /dev/null
+
+    - Next copy the next line of code and right click anywhere in putty. hit enter:
+   
+      cat /etc/udev/rules.d/10-can.rules
+
+    - the response should look like this:
+
+      <img width="1322" height="65" alt="image" src="https://github.com/user-attachments/assets/d39ffed7-4f6f-48dc-b45b-765fe7b2dd85" />
+
+    - Next copy the next line of code and right click anywhere in putty. hit enter:
+   
+      echo -e "[Match]\nName=can*\n\n[CAN]\nBitRate=1M\n\n[Link]\nRequiredForOnline=no" | sudo tee /etc/systemd/network/25-can.network > /dev/null
+
+    - Next copy the next line of code and right click anywhere in putty. hit enter:
+
+      cat /etc/systemd/network/25-can.network
+
+    - it should look like this:
+
+      <img width="462" height="167" alt="image" src="https://github.com/user-attachments/assets/114f405c-0f35-4e4b-91ff-ef463e876291" />
+
+    - Finally restart the pi by copying the next line of code and right clicking anywhere in putty. hit enter:
+
+      sudo reboot now
+
+    - There's a deviation at this point regarding your setup. These next steps explain the config for 1 octopus pro running in canbus bridge mode with a btt pi v1.2. Different installs 
+    
     - copy this next code and right click anywhere on the putty program:
       
       sudo apt update
