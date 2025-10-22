@@ -129,7 +129,22 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
       make clean
       make
 
-    - 
+    - To flash, connect your mainboard to the Pi via USB then put the mainboard into DFU/BOOT mode (your mainboard user manual should have instructions on doing this).
+
+      If your mainboard board uses an STM32 based MCU use these flashing steps: https://canbus.esoterical.online/mainboard_flashing.html#stm32-based-boards
+
+      If your mainboard board uses an RP2040 MCU, use these flashing steps: https://canbus.esoterical.online/mainboard_flashing.html#rp2040-based-boards
+
+    - next copy this code and enter it into putty. you should see your board listed and in DFU mode:
+
+      lsusb
+
+    - next copy and paste this code into putty. Please note that the 8 digits at the end of this code will be the same as your board digits as listed in the previous step.
+   
+      cd ~/katapult
+      make
+      sudo dfu-util -R -a 0 -s 0x08000000:mass-erase:force:leave -D ~/katapult/out/katapult.bin -d 0483:df11
+
       
     - copy this and right click anywhere on the putty program:
       
