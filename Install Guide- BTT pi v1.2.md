@@ -206,23 +206,42 @@ Install Klipper onto Big Tree Tech pi V1.2, Octopus Pro V1.1 and the Big tree te
       
       sudo dfu-util -R -a 0 -s 0x08000000:mass-erase:force:leave -D ~/katapult/out/katapult.bin -d 0483:df11
 
+     - next take your motherboard out of DFU mode. This could be a jumper plug or similar. it may already be out of DFU mode, in which case proceed to the following step.
+     - 
+     - next copy the next line of code and right click anywhere in putty:
+       
+       ls /dev/serial/by-id
+
+    - Take note of the next response that putty gives you, screen shot this code, right it down, record it somewhere and don't lose it. The response should look like this:
+   
+       <img width="454" height="52" alt="image" src="https://github.com/user-attachments/assets/db3fc161-2348-47a2-8f2b-5e47301dc1e0" />
+    
+    - 
       
     - copy this and right click anywhere on the putty program:
       
        ./kiauh/kiauh.sh
       
     - Select Y to keep kiauh up to date.
+      
     - Enter the previous command in again:
       
       ./kiauh/kiauh.sh
       
     - type "4" for no and remeber my choice
+      
     - type "1" for install ENTER
+      
     - (OPTIONAL INSTALL) type "9" for obico ENTER
+      
     - (OPTIONAL CONFIG) run through the process of setting up your obico account and link it by using the code or the search function in the phone app
+      
     - type "B" for back ENTER
+      
     - type "2" for update ENTER
+      
     - type "a" Update all ENTER
+      
     - if prompted for anything type ENTER for the default option
   
   - Install Octopus Pro Adapter Bracket using the same 4 screws.
